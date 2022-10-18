@@ -58,7 +58,6 @@ services:
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: -Xms256m -Xmx256m
-      #LOGSTASH_INTERNAL_PASSWORD: ${LOGSTASH_INTERNAL_PASSWORD:-}
     networks:
       - elastic
     depends_on:
@@ -75,7 +74,6 @@ services:
     ports:
       - "5601:5601"
     environment:
-      #KIBANA_SYSTEM_PASSWORD: ${KIBANA_SYSTEM_PASSWORD:-}
       # Fleet plugin
       KIBANA_FLEET_SETUP: '1'
     networks:
